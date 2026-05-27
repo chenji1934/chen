@@ -1,0 +1,13 @@
+import os
+class Config:
+    PROJECT_ROOT = r"C:\Users\cj\Desktop\BSUV-Net 2.0"
+    DATA_ROOT = os.path.join(PROJECT_ROOT, "KT3DMoSeg")
+    IMG_HEIGHT = 256; IMG_WIDTH = 256
+    TEMPORAL_WINDOW = 5; TEMPORAL_STRIDE = 1
+    NORMALIZE_MEAN = [0.485,0.456,0.406]; NORMALIZE_STD=[0.229,0.224,0.225]
+    SEED=42; EPOCHS=50; BATCH_SIZE=4; NUM_WORKERS=4
+    LR=1e-4; WEIGHT_DECAY=1e-5; AMP=True; DEVICE="cuda"
+    SAVE_DIR="checkpoints"; LOG_DIR="runs/bsuvnet2"; RESUME=""
+    SCHEDULER_STEP=15; SCHEDULER_GAMMA=0.5
+    THRESHOLD=0.5; FPS=25
+cfg=Config()
